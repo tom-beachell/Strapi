@@ -13,12 +13,6 @@
   "attributes": {
     "title": {
       "type": "string"
-    },
-    "event": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event.event",
-      "inversedBy": "locations"
     }
   }
 }

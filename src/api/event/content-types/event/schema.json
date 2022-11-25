@@ -31,17 +31,6 @@
         "audios"
       ]
     },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
-    "locations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::location.location",
-      "mappedBy": "event"
-    },
     "price_range": {
       "type": "enumeration",
       "enum": [
@@ -58,6 +47,29 @@
     },
     "group_max_size": {
       "type": "integer"
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Breda",
+        "Tilburg"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Bezienswaardigheden",
+        "Gezelligheid",
+        "Sportief",
+        "Educatief",
+        "Relaxt",
+        "Shoppen",
+        "Attracties",
+        "Sport",
+        "Natuur",
+        "Eten & Drinken",
+        "Overnachten"
+      ]
     }
   }
 }
