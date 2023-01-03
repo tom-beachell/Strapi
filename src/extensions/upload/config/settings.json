@@ -1,0 +1,11 @@
+{
+    "provider": "aws-s3",
+    "providerOptions": {
+      "accessKeyId": "AKIAR6VCRRNUEMMO3TI4",
+      "secretAccessKey": "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",
+      "region": "eu-central-1",
+      "params": {
+        "Bucket": "plan-it-api-images"
+      }
+   }
+}
