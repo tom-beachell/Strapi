@@ -1,5 +1,7 @@
-module.exports = [
+module.exports = ({ env }) => [
   'strapi::errors',
+  /* Replace 'strapi::security', with this snippet */
+  /* Beginning of snippet */
   {
     name: 'strapi::security',
     config: {
@@ -7,13 +9,26 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            `${env("AWS_BUCKET")}.s3.${env("AWS_REGION")}.amazonaws.com`,
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            `${env("AWS_BUCKET")}.s3.${env("AWS_REGION")}.amazonaws.com`,
+          ],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
+  /* End of snippet */
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
