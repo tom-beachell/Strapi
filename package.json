@@ -17,6 +17,8 @@
     "@strapi/provider-upload-cloudinary": "4.1.9",
     "@strapi/strapi": "4.1.9",
     "aws-s3": "^2.0.5",
+    "knex": "0.21.21",
+    "objection": "^2.2.18",
     "pg": "8.7.3",
     "sqlite3": "^5.1.2"
   },
